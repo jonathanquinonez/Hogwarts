@@ -1,9 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondillo"
     tools:context="jamsapp.hogwarts.MainActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/principal"
+        android:layout_width="344dp"
+        android:layout_height="495dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="264dp"
+            android:layout_height="94dp"
+            android:layout_margin="10dp"
+            android:layout_weight="0.13"
+            android:background="@drawable/hogwarts"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="164dp"
+                android:background="@color/alpha_logueo"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_weight="0.56">
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="269dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.58"
+            android:background="@color/alpha_superior"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
