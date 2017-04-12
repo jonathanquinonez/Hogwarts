@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondillo"
+    android:weightSum="1"
+    tools:context="jamsapp.hogwarts.ModificarUSU">
+    <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="167dp"
+    android:background="@color/alpha_logueo">
+
+    <ImageView
+        android:layout_width="267dp"
+        android:layout_height="157dp"
+        app:srcCompat="@drawable/hogwarts"
+        android:id="@+id/imageView3"
+        android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="311dp"
+        android:layout_height="29dp"
+        android:background="@color/alpha_logueo"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp">
+
+
+        <TextView
+            android:text="@string/MU2"
+            android:textSize="20dp"
+            android:textColor="@color/color_black"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textView5"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="311dp"
+        android:layout_height="29dp"
+        android:background="@color/alpha_logueo"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_weight="0.94">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPersonName"
+                    android:hint="@string/SE"
+                    android:textColorHint="@color/color_black"
+                    android:ems="10"
+                    android:id="@+id/etsemestre"
+                    android:layout_marginRight="110dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPersonName"
+                    android:hint="@string/ID"
+                    android:textColorHint="@color/color_black"
+                    android:ems="10"
+                    android:id="@+id/etcodigo"
+                    android:layout_marginRight="110dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPersonName"
+                    android:hint="@string/NOM"
+                    android:textColorHint="@color/color_black"
+                    android:ems="10"
+                    android:id="@+id/etnombre"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="110dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPersonName"
+                    android:hint="@string/APELL"
+                    android:textColorHint="@color/color_black"
+                    android:ems="10"
+                    android:id="@+id/etapellidos"
+                    android:layout_marginRight="110dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPersonName"
+                    android:hint="@string/DIREC"
+                    android:textColorHint="@color/color_black"
+                    android:ems="10"
+                    android:id="@+id/etdireccion"
+                    android:layout_marginRight="110dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPersonName"
+                    android:hint="@string/TELEFONO"
+                    android:textColorHint="@color/color_black"
+                    android:ems="10"
+                    android:id="@+id/ettelefono"
+                    android:layout_marginRight="110dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPersonName"
+                    android:hint="@string/CORREO"
+                    android:textColorHint="@color/color_black"
+                    android:ems="10"
+                    android:id="@+id/etcorreo"
+                    android:layout_marginRight="110dp"/>
+
+                <Button
+                    android:text="@string/GUA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button2"
+                    android:layout_marginLeft="95dp" />
+
+                <Button
+                    android:text="@string/VOLVER"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button4" />
+
+                <Button
+                    android:text="@string/CCONTRASEÑA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button3"
+                    android:layout_marginLeft="120dp"
+                    android:layout_weight="0.25" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</LinearLayout>

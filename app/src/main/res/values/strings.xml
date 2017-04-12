@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">Hogwarts</string>
+    <string name="login">INICIO DE SESIÓN</string>
+    <string name="NDU">Nombre de Usuario</string>
+    <string name="PASS">Contraseña</string>
+    <string name="En">ENTRAR</string>
+    <string name="contactenos">CONTACTENOS:</string>
+    <string name="calle">Calle 13 Nº 2-21 Barrio La Playa</string>
+    <string name="PBX">PBX: 5 827070 EXT. 123</string>
+    <string name="Ciudad">Cúcuta, Norte De Santander</string>
+    <string name="Menu">Menú</string>
+    <string name="MU">Modificar Usuario</string>
+    <string name="MH">Matricular Horario</string>
+    <string name="S">Salir</string>
+    <string name="EM">Eliminar Materia</string>
+    <string name="SE">Semestre</string>
+    <string name="ID">Codigo</string>
+    <string name="NOM">Nombres</string>
+    <string name="APELL">Apellidos</string>
+    <string name="DIREC">Direccion</string>
+    <string name="TELEFONO">Telefono</string>
+    <string name="CORREO">Correo</string>
+    <string name="GUA">GUARDAR</string>
+    <string name="VOLVER">VOLVER</string>
+    <string name="CCONTRASEÑA">CAMBIAR CONTRASEÑA</string>
+    <string name="MU2">MATRICULAR HORARIO</string>
+    <string name="CAMC">CAMBIAR CONTRASEÑA </string>
+    <string name="NCON">Nueva Contraseña</string>
+    <string name="RCON">Repetir Contraseña</string>
+    <string name="MAT"> MATRICULAR MATERIA</string>
+    <string name="PROF">PROFESORES:</string>
+    <string name="ELI">ELIMINAR MATERIAS</string>
+    <string name="ELIM">ELIMINAR</string>
 </resources>

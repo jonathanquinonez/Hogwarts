@@ -15,6 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Menu" />
+        <activity android:name=".ModificarUSU" />
+        <activity android:name=".cambiarcontrasena" />
+        <activity android:name=".Matriculamateria" />
+        <activity android:name=".Eliminarmateria"></activity>
     </application>
 
 </manifest>

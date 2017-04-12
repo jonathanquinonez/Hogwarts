@@ -2,10 +2,12 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#ff9900</color>
     <color name="alpha_superior">#67b26b66</color>
-    <color name="alpha_logueo">#f9d6883a</color>
-    <color name="boton_logue">#88ffffff</color>
+    <color name="alpha_logueo">#5ad6883a</color>
+    <color name="boton_logue">#78ffffff</color>
+    <color name="color_black">#000000</color>
+    <color name="colorb">#ff9922</color>
 
 
 </resources>
