@@ -34,6 +34,7 @@ public class ModificarUSU extends AppCompatActivity  {
     EditText correo;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,9 +52,10 @@ public class ModificarUSU extends AppCompatActivity  {
         telefono = (EditText)findViewById(R.id.ettelefono);
         correo = (EditText)findViewById(R.id.etcorreo);
 
+        Bundle bundle = getIntent().getExtras();
+        String dato=bundle.getString("idestudiantem");
 
-
-        new ModificarUSU.ConsultarDatos().execute("http://Labcowork.com/mostraralumno.php?id_alumno=20132329122");
+        new ModificarUSU.ConsultarDatos().execute("http://Labcowork.com/mostraralumno.php?id_alumno="+dato);
 
 
 
@@ -74,12 +76,13 @@ public class ModificarUSU extends AppCompatActivity  {
                 return "Unable to retrieve web page. URL may be invalid.";
             }
         }
-
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(String result) {
 
             JSONArray ja = null;
+
+
             try {
                 ja = new JSONArray(result);
                 nombre.setText(ja.getString(1));
@@ -89,16 +92,14 @@ public class ModificarUSU extends AppCompatActivity  {
                 telefono.setText(ja.getString(5));
                 direccion.setText(ja.getString(8));
                 correo.setText(ja.getString(6));
-
-
-
             } catch (JSONException e) {
+                Toast.makeText(getApplicationContext(), "Se almacenaron los datos correctamente", Toast.LENGTH_LONG).show();
                 e.printStackTrace();
             }
 
         }
-
     }
+
 
     private String downloadUrl(String myurl) throws IOException {
         Log.i("URL",""+myurl);

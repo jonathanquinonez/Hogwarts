@@ -26,20 +26,9 @@ package jamsapp.hogwarts;
 
 
 public class Menu extends AppCompatActivity {
-<<<<<<< HEAD
+
+
     ImageView imagen1, imagen2, imagen3;
-
-    ImageView modificar;
-    EditText nombre;
-    EditText semestre;
-    EditText apellido;
-    EditText direccion;
-    EditText telefono;
-    EditText correo;
-
-
-
-ImageView imagen1, imagen2, imagen3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,16 +38,17 @@ ImageView imagen1, imagen2, imagen3;
         imagen3= (ImageView) findViewById(R.id.imageView7);
 
 
-        Bundle bundle = getIntent().getExtras();
-        String dato=bundle.getString("idestudiante");
 
 
         imagen1.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        Bundle bundle = getIntent().getExtras();
+                        String dato=bundle.getString("idestudiante");
                         Intent i = new Intent(Menu.this,ModificarUSU.class);
                         String cadena = "Bienvenido [NOMBRE]";
+                        i.putExtra("idestudiantem", dato);
                         Toast notificacion = Toast.makeText(getApplicationContext(), cadena, Toast.LENGTH_LONG);
                         startActivity(i);
 
