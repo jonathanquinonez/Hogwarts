@@ -33,25 +33,25 @@
 
 
         <TextView
-            android:text="@string/MU2"
-            android:textSize="20dp"
-            android:textColor="@color/color_black"
-            android:textStyle="bold"
+            android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/textView5"
-            android:textAlignment="center"/>
+            android:text="@string/MU"
+            android:textAlignment="center"
+            android:textColor="@color/color_black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="311dp"
         android:layout_height="29dp"
-        android:background="@color/alpha_logueo"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
-        android:layout_weight="0.94">
+        android:layout_weight="0.94"
+        android:background="@color/alpha_logueo"
+        android:orientation="vertical">
 
 
         <ScrollView
@@ -65,96 +65,108 @@
                 android:weightSum="1">
 
                 <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:inputType="textPersonName"
-                    android:hint="@string/SE"
-                    android:textColorHint="@color/color_black"
-                    android:ems="10"
                     android:id="@+id/etsemestre"
-                    android:layout_marginRight="110dp" />
-
-                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="textPersonName"
-                    android:hint="@string/ID"
-                    android:textColorHint="@color/color_black"
+                    android:layout_marginRight="110dp"
                     android:ems="10"
+                    android:hint="@string/SE"
+                    android:inputType="textPersonName"
+                    android:textColorHint="@color/color_black" />
+
+                <EditText
                     android:id="@+id/etcodigo"
-                    android:layout_marginRight="110dp"/>
-
-                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="textPersonName"
-                    android:hint="@string/NOM"
-                    android:textColorHint="@color/color_black"
+                    android:layout_marginRight="110dp"
                     android:ems="10"
+                    android:hint="@string/ID"
+                    android:inputType="textPersonName"
+                    android:textColorHint="@color/color_black" />
+
+                <EditText
                     android:id="@+id/etnombre"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="110dp"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginRight="110dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1.73"
+                    android:background="@color/boton_logue"
+                    android:ems="10"
+                    android:hint="@string/NOM"
+                    android:inputType="textPersonName"
+                    android:textColorHint="@color/color_black" />
 
                 <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:inputType="textPersonName"
-                    android:hint="@string/APELL"
-                    android:textColorHint="@color/color_black"
-                    android:ems="10"
                     android:id="@+id/etapellidos"
-                    android:layout_marginRight="110dp"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="110dp"
+                    android:background="@color/boton_logue"
+
+                    android:layout_marginBottom="7dp"
+                    android:ems="10"
+                    android:hint="@string/APELL"
+                    android:inputType="textPersonName"
+                    android:textColorHint="@color/color_black" />
 
                 <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:inputType="textPersonName"
-                    android:hint="@string/DIREC"
-                    android:textColorHint="@color/color_black"
-                    android:ems="10"
+                    android:layout_marginBottom="7dp"
                     android:id="@+id/etdireccion"
-                    android:layout_marginRight="110dp"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="110dp"
+                    android:background="@color/boton_logue"
+                    android:ems="10"
+                    android:hint="@string/DIREC"
+                    android:inputType="textPersonName"
+                    android:textColorHint="@color/color_black" />
 
                 <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:inputType="textPersonName"
-                    android:hint="@string/TELEFONO"
-                    android:textColorHint="@color/color_black"
-                    android:ems="10"
+                    android:layout_marginBottom="7dp"
                     android:id="@+id/ettelefono"
-                    android:layout_marginRight="110dp"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="110dp"
+                    android:background="@color/boton_logue"
+                    android:ems="10"
+                    android:hint="@string/TELEFONO"
+                    android:inputType="textPersonName"
+                    android:textColorHint="@color/color_black" />
 
                 <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:inputType="textPersonName"
-                    android:hint="@string/CORREO"
-                    android:textColorHint="@color/color_black"
-                    android:ems="10"
+                    android:layout_marginBottom="7dp"
                     android:id="@+id/etcorreo"
-                    android:layout_marginRight="110dp"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="110dp"
+                    android:background="@color/boton_logue"
+                    android:ems="10"
+                    android:hint="@string/CORREO"
+                    android:inputType="textPersonName"
+                    android:textColorHint="@color/color_black" />
 
                 <Button
-                    android:text="@string/GUA"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/button2"
-                    android:layout_marginLeft="95dp" />
-
-                <Button
-                    android:text="@string/VOLVER"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button4" />
+                    android:layout_marginLeft="95dp"
+                    android:text="@string/GUA" />
 
                 <Button
-                    android:text="@string/CCONTRASEÑA"
+                    android:id="@+id/button4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/VOLVER" />
+
+                <Button
                     android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="120dp"
-                    android:layout_weight="0.25" />
+                    android:layout_weight="0.25"
+                    android:text="@string/CCONTRASEÑA" />
 
             </LinearLayout>
         </ScrollView>

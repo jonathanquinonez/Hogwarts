@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
                     }});
 
 
+
+
     }
 
     private class CargarDatos extends AsyncTask<String, Void, String> {
@@ -88,8 +90,8 @@ public class MainActivity extends AppCompatActivity {
             JSONArray ja = null;
             try {
                 ja = new JSONArray(result);
-                etNombres.setText(ja.getString(1));
-                etTelefono.setText(ja.getString(2));
+                //etNombres.setText(ja.getString(1));
+                //etTelefono.setText(ja.getString(2));
 
             } catch (JSONException e) {
                 e.printStackTrace();
