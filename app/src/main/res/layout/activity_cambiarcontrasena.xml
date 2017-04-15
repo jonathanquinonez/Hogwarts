@@ -55,37 +55,37 @@
         android:weightSum="1">
 
         <EditText
-            android:inputType="textPassword"
-            android:hint="@string/NCON"
-            android:textColorHint="@color/color_black"
-            android:ems="10"
             android:id="@+id/contrasena"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="20dp"
-            android:background="@color/boton_logue"
             android:layout_width="220dp"
-            android:layout_height="25dp" />
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/boton_logue"
+            android:ems="10"
+            android:hint="@string/NCON"
+            android:inputType="textPassword"
+            android:textColorHint="@color/color_black" />
 
         <EditText
-            android:layout_width="220dp"
-            android:layout_height="25dp"
-            android:inputType="textPassword"
-            android:hint="@string/RCON"
-            android:textColorHint="@color/color_black"
-            android:ems="10"
             android:id="@+id/rcontrasena"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="15dp"
-            android:background="@color/boton_logue" />
+            android:background="@color/boton_logue"
+            android:ems="10"
+            android:hint="@string/RCON"
+            android:inputType="textPassword"
+            android:textColorHint="@color/color_black" />
 
         <Button
-            android:text="@string/GUA"
+            android:id="@+id/guardarcontrasena"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button5"
-            android:layout_weight="0.16"
             android:layout_marginLeft="80dp"
-            android:layout_marginTop="15dp" />
+            android:layout_marginTop="15dp"
+            android:layout_weight="0.16"
+            android:text="@string/GUA" />
 
         <Button
             android:text="@string/VOLVER"

@@ -36,6 +36,7 @@ public class ModificarUSU extends AppCompatActivity  {
     EditText correo;
     Button guardar;
     String contraseña;
+    Button cambiarC;
 
 
     @Override
@@ -55,6 +56,7 @@ public class ModificarUSU extends AppCompatActivity  {
         telefono = (EditText)findViewById(R.id.ettelefono);
         correo = (EditText)findViewById(R.id.etcorreo);
         guardar =(Button)findViewById(R.id.guardar);
+        cambiarC = (Button)findViewById(R.id.cambiarcontra);
 
         Bundle bundle = getIntent().getExtras();
         String dato=bundle.getString("idestudiantem");
@@ -72,6 +74,20 @@ public class ModificarUSU extends AppCompatActivity  {
                     new CargarDatos().execute("http://Labcowork.com/updateinfoalumno.php?id_alumno="+dato+"&nombre="+nombre.getText().toString()+"&apellido="+apellido.getText().toString()+"&telefono="+telefono.getText().toString()+"&correo="+correo.getText().toString()+"&contrasena="+contraseña);
                 }
             });
+
+        cambiarC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                Bundle bundle = getIntent().getExtras();
+                String dato=bundle.getString("idestudiantem");
+                Intent i = new Intent(ModificarUSU.this, cambiarcontrasena.class);
+                i.putExtra("idestudiante", dato);
+
+                startActivity(i);
+            }
+        });
 
 
     }
@@ -127,6 +143,7 @@ public class ModificarUSU extends AppCompatActivity  {
                 direccion.setText(ja.getString(8));
                 correo.setText(ja.getString(6));
                 contraseña=(ja.getString(7));
+
 
             } catch (JSONException e) {
                 Toast.makeText(getApplicationContext(), "Se almacenaron los datos correctamente", Toast.LENGTH_LONG).show();

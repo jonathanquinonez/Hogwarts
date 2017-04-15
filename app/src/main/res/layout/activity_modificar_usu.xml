@@ -161,7 +161,7 @@
                     android:text="@string/VOLVER" />
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/cambiarcontra"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="120dp"
