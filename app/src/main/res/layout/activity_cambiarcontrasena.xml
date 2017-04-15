@@ -88,13 +88,13 @@
             android:text="@string/GUA" />
 
         <Button
-            android:text="@string/VOLVER"
+            android:id="@+id/volver"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button6"
-            android:layout_weight="0.16"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="15dp" />
+            android:layout_marginTop="15dp"
+            android:layout_weight="0.16"
+            android:text="@string/VOLVER" />
 
 
     </LinearLayout>

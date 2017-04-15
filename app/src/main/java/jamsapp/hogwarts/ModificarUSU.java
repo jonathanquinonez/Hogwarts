@@ -37,6 +37,7 @@ public class ModificarUSU extends AppCompatActivity  {
     Button guardar;
     String contraseña;
     Button cambiarC;
+    Button Volver;
 
 
     @Override
@@ -57,6 +58,7 @@ public class ModificarUSU extends AppCompatActivity  {
         correo = (EditText)findViewById(R.id.etcorreo);
         guardar =(Button)findViewById(R.id.guardar);
         cambiarC = (Button)findViewById(R.id.cambiarcontra);
+        Volver = (Button)findViewById(R.id.volver);
 
         Bundle bundle = getIntent().getExtras();
         String dato=bundle.getString("idestudiantem");
@@ -86,6 +88,13 @@ public class ModificarUSU extends AppCompatActivity  {
                 i.putExtra("idestudiante", dato);
 
                 startActivity(i);
+            }
+        });
+
+        Volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
 

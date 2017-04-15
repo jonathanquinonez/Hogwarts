@@ -23,6 +23,7 @@ public class cambiarcontrasena extends AppCompatActivity {
     EditText nuevaC;
     EditText repetirC;
     Button cambiarcontrasena;
+    Button Volver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,7 @@ public class cambiarcontrasena extends AppCompatActivity {
         cambiarcontrasena=(Button)findViewById(R.id.guardarcontrasena);
         nuevaC =(EditText)findViewById(R.id.contrasena) ;
         repetirC =(EditText)findViewById(R.id.rcontrasena) ;
+        Volver = (Button)findViewById(R.id.volver);
 
 
         cambiarcontrasena.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +54,13 @@ public class cambiarcontrasena extends AppCompatActivity {
                 }
 
 
+            }
+        });
+
+        Volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
 
