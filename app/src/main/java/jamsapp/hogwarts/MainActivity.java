@@ -24,11 +24,14 @@ import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
      Button boton;
+    EditText etuser, etpassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         boton = (Button) findViewById(R.id.button);
+        etuser = (EditText)findViewById(R.id.user);
+        etpassword = (EditText)findViewById(R.id.password);
 
 
         boton.setOnClickListener(
@@ -36,12 +39,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
-
-                        Intent i = new Intent(MainActivity.this, Menu.class);
-                        String cadena = "Bienvenido [NOMBRE]";
-                        Toast notificacion = Toast.makeText(getApplicationContext(), cadena, Toast.LENGTH_LONG);
-                        notificacion.show();
-                        startActivity(i);
+                        new ConsultarDatos().execute("http://labcowork.com/mostraralumno.php?id_alumno="+etuser.getText().toString());
 
 
                     }});
@@ -88,12 +86,36 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
 
             JSONArray ja = null;
+
+
             try {
                 ja = new JSONArray(result);
+
                 //etNombres.setText(ja.getString(1));
                 //etTelefono.setText(ja.getString(2));
 
+                String usuario,contrasena, nombre;
+                usuario=ja.getString(0);
+                contrasena=ja.getString(7);
+                nombre=ja.getString(1);
+                if(usuario.equals(etuser.getText().toString()) && contrasena.equals(etpassword.getText().toString())) {
+                    Intent i = new Intent(MainActivity.this, Menu.class);
+                    i.putExtra("idestudiante",usuario);
+                    String cadena = "Bienvenido "+nombre;
+                    Toast notificacion = Toast.makeText(getApplicationContext(), cadena, Toast.LENGTH_LONG);
+                    notificacion.show();
+                    startActivity(i);
+                }else{
+                    String cadena = "Contraseña y Usuario no Coinciden";
+                    Toast notificacion = Toast.makeText(getApplicationContext(), cadena, Toast.LENGTH_LONG);
+                    notificacion.show();
+                }
+
+
+
+
             } catch (JSONException e) {
+                Toast.makeText(getApplicationContext(), "Se almacenaron los datos correctamente", Toast.LENGTH_LONG).show();
                 e.printStackTrace();
             }
 
