@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 public class Menu extends AppCompatActivity {
 ImageView imagen1, imagen2, imagen3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +19,10 @@ ImageView imagen1, imagen2, imagen3;
         imagen1= (ImageView) findViewById(R.id.imageView4);
         imagen2= (ImageView) findViewById(R.id.imageView5);
         imagen3= (ImageView) findViewById(R.id.imageView7);
+
+
+        Bundle bundle = getIntent().getExtras();
+        String dato=bundle.getString("idestudiante");
 
         imagen1.setOnClickListener(
                 new View.OnClickListener() {
