@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -32,7 +34,8 @@ public class ModificarUSU extends AppCompatActivity  {
     EditText direccion;
     EditText telefono;
     EditText correo;
-
+    Button guardar;
+    String contraseña;
 
 
     @Override
@@ -51,6 +54,7 @@ public class ModificarUSU extends AppCompatActivity  {
         direccion = (EditText)findViewById(R.id.etdireccion);
         telefono = (EditText)findViewById(R.id.ettelefono);
         correo = (EditText)findViewById(R.id.etcorreo);
+        guardar =(Button)findViewById(R.id.guardar);
 
         Bundle bundle = getIntent().getExtras();
         String dato=bundle.getString("idestudiantem");
@@ -59,9 +63,39 @@ public class ModificarUSU extends AppCompatActivity  {
 
 
 
+            guardar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Bundle bundle = getIntent().getExtras();
+                    String dato=bundle.getString("idestudiantem");
+                    new CargarDatos().execute("http://Labcowork.com/updateinfoalumno.php?id_alumno="+dato+"&nombre="+nombre.getText().toString()+"&apellido="+apellido.getText().toString()+"&telefono="+telefono.getText().toString()+"&correo="+correo.getText().toString()+"&contrasena="+contraseña);
+                }
+            });
+
 
     }
 
+
+    private class CargarDatos extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... urls) {
+
+            // params comes from the execute() call: params[0] is the url.
+            try {
+                return downloadUrl(urls[0]);
+            } catch (IOException e) {
+                return "Unable to retrieve web page. URL may be invalid.";
+            }
+        }
+        // onPostExecute displays the results of the AsyncTask.
+        @Override
+        protected void onPostExecute(String result) {
+
+            Toast.makeText(getApplicationContext(), "Se almacenaron los datos correctamente", Toast.LENGTH_LONG).show();
+
+        }
+    }
 
 
 
@@ -92,6 +126,8 @@ public class ModificarUSU extends AppCompatActivity  {
                 telefono.setText(ja.getString(5));
                 direccion.setText(ja.getString(8));
                 correo.setText(ja.getString(6));
+                contraseña=(ja.getString(7));
+
             } catch (JSONException e) {
                 Toast.makeText(getApplicationContext(), "Se almacenaron los datos correctamente", Toast.LENGTH_LONG).show();
                 e.printStackTrace();
