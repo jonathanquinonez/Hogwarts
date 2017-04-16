@@ -47,7 +47,7 @@ public class Menu extends AppCompatActivity {
                         Bundle bundle = getIntent().getExtras();
                         String dato=bundle.getString("idestudiante");
                         Intent i = new Intent(Menu.this,ModificarUSU.class);
-                        String cadena = "Bienvenido [NOMBRE]";
+                        String cadena = "Bienvenido";
                         i.putExtra("idestudiantem", dato);
                         Toast notificacion = Toast.makeText(getApplicationContext(), cadena, Toast.LENGTH_LONG);
                         startActivity(i);
@@ -58,10 +58,14 @@ public class Menu extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        Bundle bundle = getIntent().getExtras();
+                        String dato=bundle.getString("idestudiante");
                         Intent i = new Intent(Menu.this,Matriculamateria.class);
-                        String cadena = "Bienvenido [NOMBRE]";
+                        i.putExtra("idestudiantem", dato);
+                        String cadena = "Bienvenido";
                         Toast notificacion = Toast.makeText(getApplicationContext(), cadena, Toast.LENGTH_LONG);
                         notificacion.show();
+                        startActivity(i);
 
                     }});
         imagen3.setOnClickListener(
@@ -69,7 +73,7 @@ public class Menu extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent i = new Intent(Menu.this,Eliminarmateria.class);
-                        String cadena = "Bienvenido [NOMBRE]";
+                        String cadena = "Bienvenido";
                         Toast notificacion = Toast.makeText(getApplicationContext(), cadena, Toast.LENGTH_LONG);
                         notificacion.show();
                         startActivity(i);
