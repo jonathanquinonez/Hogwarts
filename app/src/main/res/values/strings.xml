@@ -31,4 +31,5 @@
     <string name="PROF">PROFESORES:</string>
     <string name="ELI">ELIMINAR MATERIAS</string>
     <string name="ELIM">ELIMINAR</string>
+    <string name="descri">Descripcion</string>
 </resources>

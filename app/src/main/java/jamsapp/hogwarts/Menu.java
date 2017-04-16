@@ -68,10 +68,10 @@ public class Menu extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        Bundle bundle = getIntent().getExtras();
+                        String dato=bundle.getString("idestudiante");
                         Intent i = new Intent(Menu.this,Eliminarmateria.class);
-                        String cadena = "Bienvenido [NOMBRE]";
-                        Toast notificacion = Toast.makeText(getApplicationContext(), cadena, Toast.LENGTH_LONG);
-                        notificacion.show();
+                        i.putExtra("idestudiantee", dato);
                         startActivity(i);
 
 

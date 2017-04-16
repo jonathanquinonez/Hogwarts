@@ -73,7 +73,7 @@
                     android:layout_marginTop="20dp" />
                 <EditText
                     android:inputType="text"
-                    android:hint="@string/NCON"
+                    android:hint="@string/ID"
                     android:textColorHint="@color/color_black"
                     android:ems="10"
                     android:id="@+id/codigo"
@@ -85,7 +85,7 @@
 
                 <EditText
                     android:inputType="text"
-                    android:hint="@string/NCON"
+                    android:hint="@string/NOM"
                     android:textColorHint="@color/color_black"
                     android:ems="10"
                     android:id="@+id/nombre"
@@ -97,10 +97,10 @@
 
                 <EditText
                     android:inputType="textMultiLine"
-                    android:hint="@string/NCON"
+                    android:hint="@string/descri"
                     android:textColorHint="@color/color_black"
                     android:ems="10"
-                    android:id="@+id/contrasena"
+                    android:id="@+id/descripcion"
                     android:lines="6"
                     android:layout_marginTop="40dp"
                     android:layout_marginLeft="20dp"
