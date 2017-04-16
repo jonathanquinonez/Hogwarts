@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -23,14 +24,20 @@ import java.io.Reader;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Eliminarmateria extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+import static android.widget.AdapterView.*;
+
+public class Eliminarmateria extends AppCompatActivity{
 
     Button Volver,Eliminar;
     EditText etnombrem,etprofesor,etdescripcion;
     Spinner spinner1;
-    String Semestre;
-    String [] sem;
+    ArrayAdapter<String> semestre;
+    String [] semestree={"--"};
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,14 +49,13 @@ public class Eliminarmateria extends AppCompatActivity implements AdapterView.On
         etprofesor = (EditText)findViewById(R.id.password);
         etdescripcion=(EditText)findViewById(R.id.password);
         spinner1= (Spinner) findViewById(R.id.spinner);
-        spinner1.setOnItemSelectedListener(this);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, sem);
-        spinner1.setAdapter(adapter);
+
 
         Bundle bundle = getIntent().getExtras();
         String dato=bundle.getString("idestudiantee");
         new Eliminarmateria.ConsultarDatos().execute("http://labcowork.com/mostraralumno.php?id_alumno="+dato);
-
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,semestree);
+        spinner1.setAdapter(adapter);
 
 
 
@@ -64,15 +70,7 @@ public class Eliminarmateria extends AppCompatActivity implements AdapterView.On
 
 
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
 
     private class ConsultarDatos extends AsyncTask<String, Void, String> {
         @Override
@@ -95,14 +93,14 @@ public class Eliminarmateria extends AppCompatActivity implements AdapterView.On
             try {
                 ja = new JSONArray(result);
 
-                Semestre =ja.getString(3);
-                new Eliminarmateria.ConsultarDatos2().execute("http://labcowork.com/mostrarcursopors.php?semestre="+Semestre);
+                String Semestre =ja.getString(3);
+                Toast.makeText(getApplicationContext(), Semestre, Toast.LENGTH_LONG).show();
+                new Eliminarmateria.ConsultarDatos2().execute("http://labcowork.com/mostrarmateriapors.php?semestre="+Semestre);
 
 
 
             } catch (JSONException e) {
-                Toast.makeText(getApplicationContext(), "Se almacenaron los datos correctamente", Toast.LENGTH_LONG).show();
-                e.printStackTrace();
+                 e.printStackTrace();
             }
 
         }
@@ -127,19 +125,19 @@ public class Eliminarmateria extends AppCompatActivity implements AdapterView.On
 
             try {
                 ja = new JSONArray(result);
+                JSONObject jsonArray = null;
+
+
 
                 for (int i=0;i<ja.length();i++){
-                    
+                 semestree[i+1]=(ja.getJSONObject(i).getString(String.valueOf(1)));
                 }
+                Toast.makeText(getApplicationContext(), ja.getJSONObject(2).getString(String.valueOf(1)), Toast.LENGTH_LONG).show();
 
-                String usuario,contrasena, nombre;
-                usuario=ja.getString(0);
-                contrasena=ja.getString(7);
-                nombre=ja.getString(1);
 
 
             } catch (JSONException e) {
-                Toast.makeText(getApplicationContext(), "Se almacenaron los datos correctamente", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "no entro a la consulta", Toast.LENGTH_LONG).show();
                 e.printStackTrace();
             }
 
