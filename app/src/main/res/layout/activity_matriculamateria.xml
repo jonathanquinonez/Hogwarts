@@ -76,33 +76,33 @@
                     android:textAlignment="center"/>
 
                 <Spinner
+                    android:id="@+id/spinnermateria"
                     android:layout_width="235dp"
-                    android:id="@+id/spinner"
-                    android:layout_gravity="center"
                     android:layout_height="37dp"
+                    android:layout_gravity="center"
                     android:layout_marginTop="20dp" />
 
                 <RadioButton
-                    android:text="RadioButton"
+                    android:id="@+id/radprofesor1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioButton"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginTop="40dp"
-                    android:layout_marginLeft="30dp" />
+                    android:text="RadioButton" />
 
                 <RadioButton
-                    android:text="RadioButton"
+                    android:id="@+id/radprofesor2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioButton2"
-                    android:layout_marginLeft="30dp" />
+                    android:layout_marginLeft="30dp"
+                    android:text="RadioButton" />
 
                 <RadioButton
-                    android:text="RadioButton"
+                    android:id="@+id/radprofesor3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioButton3"
-                    android:layout_marginLeft="30dp" />
+                    android:layout_marginLeft="30dp"
+                    android:text="RadioButton" />
 
                 <Button
                     android:text="@string/GUA"
