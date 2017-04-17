@@ -98,11 +98,12 @@
         android:layout_marginTop="10dp" />
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/alpha_logueo"
+        android:layout_height="128dp"
         android:layout_marginTop="25dp"
+        android:layout_weight="0.12"
+        android:background="@color/alpha_logueo"
+        android:orientation="vertical"
         android:weightSum="1">
 
         <TextView
@@ -111,11 +112,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:gravity="center"
-            android:shadowColor="@android:color/background_dark"
-            android:shadowDx="3"
-            android:shadowRadius="2"
+
             android:text="@string/contactenos"
-            android:textColor="@android:color/background_dark"
+            android:textColor="@color/boton_logue"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -125,7 +124,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/calle"
-            android:textColor="@android:color/background_dark"
+            android:textColor="@color/boton_logue"
             android:textSize="17dp"
             android:textStyle="bold" />
 
@@ -133,10 +132,11 @@
             android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:layout_marginLeft="15dp"
             android:gravity="center"
             android:text="@string/Ciudad"
-            android:textColor="@android:color/background_dark"
+            android:textColor="@color/boton_logue"
             android:textSize="17dp"
             android:textStyle="bold" />
 

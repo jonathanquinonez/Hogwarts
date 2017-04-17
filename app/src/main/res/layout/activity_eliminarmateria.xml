@@ -66,57 +66,59 @@
                 android:weightSum="1">
 
                 <Spinner
-                    android:layout_width="235dp"
                     android:id="@+id/spinner"
-                    android:layout_gravity="center"
+                    android:layout_width="235dp"
                     android:layout_height="37dp"
+                    android:layout_gravity="center"
                     android:layout_marginTop="20dp"
                     android:background="@color/boton_logue" />
+
                 <EditText
-                    android:inputType="text"
-                    android:hint="@string/ID"
-                    android:textColorHint="@color/color_black"
-                    android:ems="10"
                     android:id="@+id/codigo"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginLeft="20dp"
-                    android:background="@color/boton_logue"
                     android:layout_width="220dp"
-                    android:layout_height="25dp" />
-
-                <EditText
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@color/boton_logue"
+                    android:ems="10"
+                    android:hint="@string/ID"
                     android:inputType="text"
-                    android:hint="@string/NOM"
-                    android:textColorHint="@color/color_black"
-                    android:ems="10"
-                    android:id="@+id/nombre"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginLeft="20dp"
-                    android:background="@color/boton_logue"
-                    android:layout_width="220dp"
-                    android:layout_height="25dp" />
+                    android:textColorHint="@color/color_black" />
 
                 <EditText
-                    android:inputType="textMultiLine"
-                    android:hint="@string/descri"
-                    android:textColorHint="@color/color_black"
-                    android:ems="10"
-                    android:id="@+id/descripcion"
-                    android:lines="6"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginLeft="20dp"
-                    android:background="@color/boton_logue"
+                    android:id="@+id/nombre"
                     android:layout_width="220dp"
-                    android:layout_height="25dp" />
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@color/boton_logue"
+                    android:ems="10"
+                    android:hint="@string/NOM"
+                    android:inputType="text"
+                    android:textColorHint="@color/color_black" />
+
+                <EditText
+                    android:id="@+id/descripcion"
+                    android:layout_width="220dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_weight="0.14"
+                    android:background="@color/boton_logue"
+                    android:ems="10"
+                    android:hint="@string/descri"
+                    android:inputType="text|textMultiLine"
+                    android:lines="6"
+                    android:textColorHint="@color/color_black" />
 
                 <Button
-                    android:text="@string/ELIM"
+                    android:id="@+id/button5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button5"
-                    android:layout_weight="0.16"
                     android:layout_marginLeft="80dp"
-                    android:layout_marginTop="15dp" />
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="0.16"
+                    android:text="@string/ELIM" />
 
                 <Button
                     android:id="@+id/volver"
