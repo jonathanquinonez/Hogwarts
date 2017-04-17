@@ -7,6 +7,7 @@ package jamsapp.hogwarts;
         import android.os.Bundle;
         import android.util.Log;
         import android.view.View;
+        import android.webkit.WebView;
         import android.widget.Button;
         import android.widget.EditText;
         import android.widget.ImageView;
@@ -28,7 +29,7 @@ package jamsapp.hogwarts;
 public class Menu extends AppCompatActivity {
 
 
-    ImageView imagen1, imagen2, imagen3;
+    ImageView imagen1, imagen2, imagen3, imagen4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +37,7 @@ public class Menu extends AppCompatActivity {
         imagen1= (ImageView) findViewById(R.id.imageView4);
         imagen2= (ImageView) findViewById(R.id.imageView5);
         imagen3= (ImageView) findViewById(R.id.imageView7);
+        imagen4= (ImageView) findViewById(R.id.imageView6);
 
 
 
@@ -47,12 +49,10 @@ public class Menu extends AppCompatActivity {
                         Bundle bundle = getIntent().getExtras();
                         String dato=bundle.getString("idestudiante");
                         Intent i = new Intent(Menu.this,ModificarUSU.class);
-                        String cadena = "Bienvenido";
                         i.putExtra("idestudiantem", dato);
-                        Toast notificacion = Toast.makeText(getApplicationContext(), cadena, Toast.LENGTH_LONG);
                         startActivity(i);
 
-                        notificacion.show();
+
                     }});
         imagen2.setOnClickListener(
                 new View.OnClickListener() {
@@ -62,9 +62,6 @@ public class Menu extends AppCompatActivity {
                         String dato=bundle.getString("idestudiante");
                         Intent i = new Intent(Menu.this,Matriculamateria.class);
                         i.putExtra("idestudiantem", dato);
-                        String cadena = "Bienvenido";
-                        Toast notificacion = Toast.makeText(getApplicationContext(), cadena, Toast.LENGTH_LONG);
-                        notificacion.show();
                         startActivity(i);
 
                     }});
@@ -76,14 +73,22 @@ public class Menu extends AppCompatActivity {
                         String dato=bundle.getString("idestudiante");
                         Intent i = new Intent(Menu.this,Eliminarmateria.class);
                         i.putExtra("idestudiantee", dato);
+<<<<<<< HEAD
 
                         String cadena = "Bienvenido";
                         Toast notificacion = Toast.makeText(getApplicationContext(), cadena, Toast.LENGTH_LONG);
                         notificacion.show();
 
+=======
+>>>>>>> e294c92a5e6c8a1351845bf5af76dc1a5aac24c5
                         startActivity(i);
-
-
+                    }});
+        imagen4.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        finish();
+                        System.exit(0);
                     }});
 
     }

@@ -146,7 +146,9 @@ public class ModificarUSU extends AppCompatActivity  {
                 ja = new JSONArray(result);
                 nombre.setText(ja.getString(1));
                 codigo.setText(ja.getString(0));
+                codigo.setEnabled(false);
                 semestre.setText(ja.getString(3));
+                semestre.setEnabled(false);
                 apellido.setText(ja.getString(4));
                 telefono.setText(ja.getString(5));
                 direccion.setText(ja.getString(8));

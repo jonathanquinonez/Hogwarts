@@ -41,17 +41,23 @@ public class cambiarcontrasena extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+              if(!(nuevaC.getText().toString().equals("")||repetirC.getText().toString().equals(""))){
+                  if((nuevaC.getText().toString().equals(repetirC.getText().toString()))){
+                      Bundle bundle = getIntent().getExtras();
+                      String dato=bundle.getString("idestudiante");
 
-                if(nuevaC.getText().toString().equals(repetirC.getText().toString())&&nuevaC.getText().toString()!=null&&repetirC.getText().toString()!=null){
-                    Bundle bundle = getIntent().getExtras();
-                    String dato=bundle.getString("idestudiante");
+                      new CargarDatos().execute("http://Labcowork.com/updatecontrasenaalumno.php?id_alumno="+dato+"&contrasena="+nuevaC.getText().toString());
+                      finish();
 
-                    new CargarDatos().execute("http://Labcowork.com/updatecontrasenaalumno.php?id_alumno="+dato+"&contrasena="+nuevaC.getText().toString());
+                  }else {
+                      Toast notificacion = Toast.makeText(getApplicationContext(), "Contraseñas no Coinciden", Toast.LENGTH_LONG);
+                      notificacion.show();
+                  }
+              }else{
+                  Toast notificacion1 = Toast.makeText(getApplicationContext(), "Campos Vacios", Toast.LENGTH_LONG);
+                  notificacion1.show();
+              }
 
-                }else {
-                    Toast notificacion = Toast.makeText(getApplicationContext(), "error al cambiar la contraseña", Toast.LENGTH_LONG);
-                    notificacion.show();
-                }
 
 
             }
