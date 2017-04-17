@@ -46,12 +46,12 @@
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="311dp"
         android:layout_height="match_parent"
-        android:background="@color/alpha_logueo"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
+        android:background="@color/alpha_logueo"
+        android:orientation="vertical"
         android:weightSum="1">
 
 
@@ -66,52 +66,60 @@
                 android:weightSum="1">
 
                 <TextView
-                    android:text="@string/PROF"
-                    android:textSize="18dp"
-                    android:textColor="@color/color_black"
-                    android:textStyle="bold"
+                    android:id="@+id/textView6"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/textView6"
-                    android:textAlignment="center"/>
+                    android:text="@string/PROF"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
 
                 <Spinner
                     android:id="@+id/spinnermateria"
-                    android:layout_width="235dp"
+                    android:layout_width="match_parent"
                     android:layout_height="37dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20dp" />
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1" />
 
-                <RadioButton
-                    android:id="@+id/radprofesor1"
+                <RadioGroup
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="40dp"
-                    android:text="RadioButton" />
+                    android:layout_height="match_parent">
 
-                <RadioButton
-                    android:id="@+id/radprofesor2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:text="RadioButton" />
+                    <RadioButton
+                        android:id="@+id/radprofesor1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1"
+                        android:text="RadioButton" />
 
-                <RadioButton
-                    android:id="@+id/radprofesor3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:text="RadioButton" />
+                    <RadioButton
+                        android:id="@+id/radprofesor2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1"
+                        android:text="RadioButton" />
+
+                    <RadioButton
+                        android:id="@+id/radprofesor3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1"
+                        android:text="RadioButton" />
+                </RadioGroup>
 
                 <Button
-                    android:text="@string/GUA"
+                    android:id="@+id/guardar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button5"
-                    android:layout_weight="0.16"
                     android:layout_marginLeft="80dp"
-                    android:layout_marginTop="15dp" />
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="0.16"
+                    android:text="@string/GUA" />
 
                 <Button
                     android:id="@+id/volver"

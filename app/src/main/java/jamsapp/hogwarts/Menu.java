@@ -75,13 +75,12 @@ public class Menu extends AppCompatActivity {
                         Bundle bundle = getIntent().getExtras();
                         String dato=bundle.getString("idestudiante");
                         Intent i = new Intent(Menu.this,Eliminarmateria.class);
-<<<<<<< HEAD
                         i.putExtra("idestudiantee", dato);
-=======
+
                         String cadena = "Bienvenido";
                         Toast notificacion = Toast.makeText(getApplicationContext(), cadena, Toast.LENGTH_LONG);
                         notificacion.show();
->>>>>>> 60b395bc4aaf8d53198ea69d12d647bef1c7e557
+
                         startActivity(i);
 
 

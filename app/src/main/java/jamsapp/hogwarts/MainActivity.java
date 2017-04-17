@@ -94,10 +94,11 @@ public class MainActivity extends AppCompatActivity {
                 //etNombres.setText(ja.getString(1));
                 //etTelefono.setText(ja.getString(2));
 
-                String usuario,contrasena, nombre;
+                String usuario,contrasena, nombre,semestre;
                 usuario=ja.getString(0);
                 contrasena=ja.getString(7);
                 nombre=ja.getString(1);
+                semestre=ja.getString(3);
                 if(usuario.equals(etuser.getText().toString()) && contrasena.equals(etpassword.getText().toString())) {
                     Intent i = new Intent(MainActivity.this, Menu.class);
                     i.putExtra("idestudiante",usuario);
