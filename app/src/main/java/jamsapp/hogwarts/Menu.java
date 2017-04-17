@@ -87,6 +87,10 @@ public class Menu extends AppCompatActivity {
                     public void onClick(View v) {
                         finish();
                         System.exit(0);
+                        Intent i= new Intent(Intent.ACTION_MAIN);
+                        i.addCategory(Intent.CATEGORY_HOME);
+                        i.setFlags(i.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(i);
                     }});
 
     }
