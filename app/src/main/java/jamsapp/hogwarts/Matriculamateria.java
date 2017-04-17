@@ -37,7 +37,7 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
     RadioButton profesor3;
 
 
-    //info alumno
+    //info alumno de consulta
     String codigo_alum;
     String nombre_alum;
     String apellido_alum;
@@ -46,20 +46,20 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
     String semestre_alum;
     String correo_alum;
 
-    //ifno profesor
+    //ifno profesor de consulta
 
     String id_profesor;
     String nombre_pro;
     String direccion_pro;
     String telefono_pro;
 
-    //info materia
+    //info materia de consulta
     String id_materia;
     String nombre_mate;
     String descripcion_mate;
     String semestre_mate;
 
-    //inf curso
+    //inf curso de consulta
     String id_profesor_curso;
     String id_materia_curso;
 
@@ -88,10 +88,6 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
 
 
         super.onCreate(savedInstanceState);
-
-
-
-
         setContentView(R.layout.activity_matriculamateria);
         Volver = (Button)findViewById(R.id.volver);
         guardar = (Button)findViewById(R.id.guardar);
@@ -117,10 +113,6 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
         });
 
 
-
-
-
-
         new Matriculamateria.ConsultarDatosalumno().execute("http://labcowork.com/mostraralumno.php?id_alumno="+dato);
 
 
@@ -134,20 +126,7 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
             spmateria.setAdapter(materiasdatooctavo);
         }
 
-
-
-
-
-
     }
-
-
-    // metodo obtener todos los profesores
-
-
-    // metodo obtener todas las materias
-
-
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
@@ -185,7 +164,6 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                                     if(profesor1.isChecked()==true)
                                     {
                                         indice_profe=9123;
-                                        Toast.makeText(getApplicationContext(), "se preciono el radio buton", Toast.LENGTH_LONG).show();
                                         new ConsultarDatosprofe().execute("http://Labcowork.com/mostrarprofesor.php?id_profesor="+indice_profe);
                                         new CargarDatos().execute("http://labcowork.com/agregaralumnocurso.php?id_alumno=20132329122&id_profesor="+indice_profe+"&id_materia="+indice);
                                         //http://labcowork.com/agregaralumnocurso.php?id_alumno=20132328860&id_profesor=9123&id_materia=1
@@ -193,7 +171,6 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                                     }else if(profesor2.isChecked()==true)
                                     {
                                         indice_profe=9124;
-                                        Toast.makeText(getApplicationContext(), "se preciono el radio buton", Toast.LENGTH_LONG).show();
                                         new ConsultarDatosprofe().execute("http://Labcowork.com/mostrarprofesor.php?id_profesor="+indice_profe);
                                         new CargarDatos().execute("http://labcowork.com/agregaralumnocurso.php?id_alumno=20132329122&id_profesor="+indice_profe+"&id_materia="+indice);
 
@@ -201,13 +178,11 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                                     }else if(profesor3.isChecked()==true)
                                     {
                                         indice_profe=9126;
-                                        Toast.makeText(getApplicationContext(), "se preciono el radio buton", Toast.LENGTH_LONG).show();
                                         new ConsultarDatosprofe().execute("http://Labcowork.com/mostrarprofesor.php?id_profesor="+indice_profe);
                                         new CargarDatos().execute("http://labcowork.com/agregaralumnocurso.php?id_alumno=20132329122&id_profesor="+indice_profe+"&id_materia="+indice);
 
 
                                     }
-                                    Toast.makeText(getApplicationContext(), " "+id_profesor, Toast.LENGTH_LONG).show();
                                 }
                             });
 
@@ -227,12 +202,10 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                                     if(profesor1.isChecked()==true)
                                     {
                                         indice_profe=9124;
-                                        Toast.makeText(getApplicationContext(), "se preciono el radio buton", Toast.LENGTH_LONG).show();
                                         new ConsultarDatosprofe().execute("http://Labcowork.com/mostrarprofesor.php?id_profesor="+indice_profe);
                                         new CargarDatos().execute("http://labcowork.com/agregaralumnocurso.php?id_alumno=20132329122&id_profesor="+indice_profe+"&id_materia="+indice);
                                         //http://labcowork.com/agregaralumnocurso.php?id_alumno=20132328860&id_profesor=9123&id_materia=1
                                     }
-                                    Toast.makeText(getApplicationContext(), " "+id_profesor, Toast.LENGTH_LONG).show();
                                 }
                             });
 
@@ -252,12 +225,10 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                                     if(profesor1.isChecked()==true)
                                     {
                                         indice_profe=9124;
-                                        Toast.makeText(getApplicationContext(), "se preciono el radio buton", Toast.LENGTH_LONG).show();
                                         new ConsultarDatosprofe().execute("http://Labcowork.com/mostrarprofesor.php?id_profesor="+indice_profe);
                                         new CargarDatos().execute("http://labcowork.com/agregaralumnocurso.php?id_alumno=20132329122&id_profesor="+indice_profe+"&id_materia="+indice);
                                         //http://labcowork.com/agregaralumnocurso.php?id_alumno=20132328860&id_profesor=9123&id_materia=1
                                     }
-                                    Toast.makeText(getApplicationContext(), " "+id_profesor, Toast.LENGTH_LONG).show();
                                 }
                             });
 
@@ -277,7 +248,6 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                                     if(profesor1.isChecked()==true)
                                     {
                                         indice_profe=9124;
-                                        Toast.makeText(getApplicationContext(), "se preciono el radio buton", Toast.LENGTH_LONG).show();
                                         new ConsultarDatosprofe().execute("http://Labcowork.com/mostrarprofesor.php?id_profesor="+indice_profe);
                                         new CargarDatos().execute("http://labcowork.com/agregaralumnocurso.php?id_alumno=20132329122&id_profesor="+indice_profe+"&id_materia="+indice);
                                         //http://labcowork.com/agregaralumnocurso.php?id_alumno=20132328860&id_profesor=9123&id_materia=1
@@ -285,11 +255,9 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                                     }else if(profesor2.isChecked()==true)
                                     {
                                         indice_profe=9127;
-                                        Toast.makeText(getApplicationContext(), "se preciono el radio buton", Toast.LENGTH_LONG).show();
                                         new ConsultarDatosprofe().execute("http://Labcowork.com/mostrarprofesor.php?id_profesor="+indice_profe);
                                         new CargarDatos().execute("http://labcowork.com/agregaralumnocurso.php?id_alumno=20132329122&id_profesor="+indice_profe+"&id_materia="+indice);
                                     }
-                                    Toast.makeText(getApplicationContext(), " "+id_profesor, Toast.LENGTH_LONG).show();
                                 }
                             });
 
@@ -310,7 +278,6 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                                     if(profesor1.isChecked()==true)
                                     {
                                         indice_profe=9125;
-                                        Toast.makeText(getApplicationContext(), "se preciono el radio buton", Toast.LENGTH_LONG).show();
                                         new ConsultarDatosprofe().execute("http://Labcowork.com/mostrarprofesor.php?id_profesor="+indice_profe);
                                         new CargarDatos().execute("http://labcowork.com/agregaralumnocurso.php?id_alumno=20132329122&id_profesor="+indice_profe+"&id_materia="+indice);
                                         //http://labcowork.com/agregaralumnocurso.php?id_alumno=20132328860&id_profesor=9123&id_materia=1
@@ -322,7 +289,6 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                                         new ConsultarDatosprofe().execute("http://Labcowork.com/mostrarprofesor.php?id_profesor="+indice_profe);
                                         new CargarDatos().execute("http://labcowork.com/agregaralumnocurso.php?id_alumno=20132329122&id_profesor="+indice_profe+"&id_materia="+indice);
                                     }
-                                    Toast.makeText(getApplicationContext(), " "+id_profesor, Toast.LENGTH_LONG).show();
                                 }
                             });
 
@@ -342,12 +308,10 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                                     if(profesor1.isChecked()==true)
                                     {
                                         indice_profe=9123;
-                                        Toast.makeText(getApplicationContext(), "se preciono el radio buton", Toast.LENGTH_LONG).show();
                                         new ConsultarDatosprofe().execute("http://Labcowork.com/mostrarprofesor.php?id_profesor="+indice_profe);
                                         new CargarDatos().execute("http://labcowork.com/agregaralumnocurso.php?id_alumno=20132329122&id_profesor="+indice_profe+"&id_materia="+indice);
                                         //http://labcowork.com/agregaralumnocurso.php?id_alumno=20132328860&id_profesor=9123&id_materia=1
                                     }
-                                    Toast.makeText(getApplicationContext(), " "+id_profesor, Toast.LENGTH_LONG).show();
                                 }
                             });
 
@@ -392,12 +356,10 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                                     if(profesor1.isChecked()==true)
                                     {
                                         indice_profe=9125;
-                                        Toast.makeText(getApplicationContext(), "se preciono el radio buton", Toast.LENGTH_LONG).show();
                                         new ConsultarDatosprofe().execute("http://Labcowork.com/mostrarprofesor.php?id_profesor="+indice_profe);
                                         new CargarDatos().execute("http://labcowork.com/agregaralumnocurso.php?id_alumno=20132328860&id_profesor="+indice_profe+"&id_materia="+indice);
                                         //http://labcowork.com/agregaralumnocurso.php?id_alumno=20132328860&id_profesor=9123&id_materia=1
                                     }
-                                    Toast.makeText(getApplicationContext(), " "+id_profesor, Toast.LENGTH_LONG).show();
                                 }
                             });
 
@@ -417,12 +379,10 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                                     if(profesor1.isChecked()==true)
                                     {
                                         indice_profe=9123;
-                                        Toast.makeText(getApplicationContext(), "se preciono el radio buton", Toast.LENGTH_LONG).show();
                                         new ConsultarDatosprofe().execute("http://Labcowork.com/mostrarprofesor.php?id_profesor="+indice_profe);
                                         new CargarDatos().execute("http://labcowork.com/agregaralumnocurso.php?id_alumno=20132328860&id_profesor="+indice_profe+"&id_materia="+indice);
                                         //http://labcowork.com/agregaralumnocurso.php?id_alumno=20132328860&id_profesor=9123&id_materia=1
                                     }
-                                    Toast.makeText(getApplicationContext(), " "+id_profesor, Toast.LENGTH_LONG).show();
                                 }
                             });
 
@@ -442,7 +402,6 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                                     if(profesor1.isChecked()==true)
                                     {
                                         indice_profe=9127;
-                                        Toast.makeText(getApplicationContext(), "se preciono el radio buton", Toast.LENGTH_LONG).show();
                                         new ConsultarDatosprofe().execute("http://Labcowork.com/mostrarprofesor.php?id_profesor="+indice_profe);
                                         new CargarDatos().execute("http://labcowork.com/agregaralumnocurso.php?id_alumno=20132328860&id_profesor="+indice_profe+"&id_materia="+indice);
                                         //http://labcowork.com/agregaralumnocurso.php?id_alumno=20132328860&id_profesor=9123&id_materia=1
@@ -450,11 +409,9 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                                     }else if(profesor2.isChecked()==true)
                                     {
                                         indice_profe=9124;
-                                        Toast.makeText(getApplicationContext(), "se preciono el radio buton", Toast.LENGTH_LONG).show();
                                         new ConsultarDatosprofe().execute("http://Labcowork.com/mostrarprofesor.php?id_profesor="+indice_profe);
                                         new CargarDatos().execute("http://labcowork.com/agregaralumnocurso.php?id_alumno=20132328860&id_profesor="+indice_profe+"&id_materia="+indice);
                                     }
-                                    Toast.makeText(getApplicationContext(), " "+id_profesor, Toast.LENGTH_LONG).show();
                                 }
                             });
 
@@ -477,7 +434,6 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                                     if(profesor1.isChecked()==true)
                                     {
                                         indice_profe=9124;
-                                        Toast.makeText(getApplicationContext(), "se preciono el radio buton", Toast.LENGTH_LONG).show();
                                         new ConsultarDatosprofe().execute("http://Labcowork.com/mostrarprofesor.php?id_profesor="+indice_profe);
                                         new CargarDatos().execute("http://labcowork.com/agregaralumnocurso.php?id_alumno=20132328860&id_profesor="+indice_profe+"&id_materia="+indice);
                                         //http://labcowork.com/agregaralumnocurso.php?id_alumno=20132328860&id_profesor=9123&id_materia=1
@@ -485,11 +441,9 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                                     }else if(profesor2.isChecked()==true)
                                     {
                                         indice_profe=9126;
-                                        Toast.makeText(getApplicationContext(), "se preciono el radio buton", Toast.LENGTH_LONG).show();
                                         new ConsultarDatosprofe().execute("http://Labcowork.com/mostrarprofesor.php?id_profesor="+indice_profe);
                                         new CargarDatos().execute("http://labcowork.com/agregaralumnocurso.php?id_alumno=20132328860&id_profesor="+indice_profe+"&id_materia="+indice);
                                     }
-                                    Toast.makeText(getApplicationContext(), " "+id_profesor, Toast.LENGTH_LONG).show();
                                 }
                             });
 
@@ -511,12 +465,10 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                                     if(profesor1.isChecked()==true)
                                     {
                                         indice_profe=9127;
-                                        Toast.makeText(getApplicationContext(), "se preciono el radio buton", Toast.LENGTH_LONG).show();
                                         new ConsultarDatosprofe().execute("http://Labcowork.com/mostrarprofesor.php?id_profesor="+indice_profe);
                                         new CargarDatos().execute("http://labcowork.com/agregaralumnocurso.php?id_alumno=20132328860&id_profesor="+indice_profe+"&id_materia="+indice);
                                         //http://labcowork.com/agregaralumnocurso.php?id_alumno=20132328860&id_profesor=9123&id_materia=1
                                     }
-                                    Toast.makeText(getApplicationContext(), " "+id_profesor, Toast.LENGTH_LONG).show();
                                 }
                             });
 
@@ -536,7 +488,6 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                                     if(profesor1.isChecked()==true)
                                     {
                                         indice_profe=9123;
-                                        Toast.makeText(getApplicationContext(), "se preciono el radio buton", Toast.LENGTH_LONG).show();
                                         new ConsultarDatosprofe().execute("http://Labcowork.com/mostrarprofesor.php?id_profesor="+indice_profe);
                                         new CargarDatos().execute("http://labcowork.com/agregaralumnocurso.php?id_alumno=20132329122&id_profesor="+indice_profe+"&id_materia="+indice);
                                         //http://labcowork.com/agregaralumnocurso.php?id_alumno=20132328860&id_profesor=9123&id_materia=1
@@ -544,7 +495,6 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                                     }else if(profesor2.isChecked()==true)
                                     {
                                         indice_profe=9124;
-                                        Toast.makeText(getApplicationContext(), "se preciono el radio buton", Toast.LENGTH_LONG).show();
                                         new ConsultarDatosprofe().execute("http://Labcowork.com/mostrarprofesor.php?id_profesor="+indice_profe);
                                         new CargarDatos().execute("http://labcowork.com/agregaralumnocurso.php?id_alumno=20132329122&id_profesor="+indice_profe+"&id_materia="+indice);
 
@@ -552,13 +502,11 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                                     }else if(profesor3.isChecked()==true)
                                     {
                                         indice_profe=9125;
-                                        Toast.makeText(getApplicationContext(), "se preciono el radio buton", Toast.LENGTH_LONG).show();
                                         new ConsultarDatosprofe().execute("http://Labcowork.com/mostrarprofesor.php?id_profesor="+indice_profe);
                                         new CargarDatos().execute("http://labcowork.com/agregaralumnocurso.php?id_alumno=20132329122&id_profesor="+indice_profe+"&id_materia="+indice);
 
 
                                     }
-                                    Toast.makeText(getApplicationContext(), " "+id_profesor, Toast.LENGTH_LONG).show();
                                 }
                             });
 
@@ -578,12 +526,10 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                                     if(profesor1.isChecked()==true)
                                     {
                                         indice_profe=9127;
-                                        Toast.makeText(getApplicationContext(), "se preciono el radio buton", Toast.LENGTH_LONG).show();
                                         new ConsultarDatosprofe().execute("http://Labcowork.com/mostrarprofesor.php?id_profesor="+indice_profe);
                                         new CargarDatos().execute("http://labcowork.com/agregaralumnocurso.php?id_alumno=20132328860&id_profesor="+indice_profe+"&id_materia="+indice);
                                         //http://labcowork.com/agregaralumnocurso.php?id_alumno=20132328860&id_profesor=9123&id_materia=1
                                     }
-                                    Toast.makeText(getApplicationContext(), " "+id_profesor, Toast.LENGTH_LONG).show();
                                 }
                             });
                             break;

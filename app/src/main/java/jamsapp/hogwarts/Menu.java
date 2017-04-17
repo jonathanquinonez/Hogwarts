@@ -73,14 +73,13 @@ public class Menu extends AppCompatActivity {
                         String dato=bundle.getString("idestudiante");
                         Intent i = new Intent(Menu.this,Eliminarmateria.class);
                         i.putExtra("idestudiantee", dato);
-<<<<<<< HEAD
+
 
                         String cadena = "Bienvenido";
                         Toast notificacion = Toast.makeText(getApplicationContext(), cadena, Toast.LENGTH_LONG);
                         notificacion.show();
 
-=======
->>>>>>> e294c92a5e6c8a1351845bf5af76dc1a5aac24c5
+
                         startActivity(i);
                     }});
         imagen4.setOnClickListener(

@@ -4,10 +4,10 @@
     <string name="NDU">Nombre de Usuario</string>
     <string name="PASS">Contraseña</string>
     <string name="En">ENTRAR</string>
-    <string name="contactenos">CONTACTENOS:</string>
-    <string name="calle">Calle 13 Nº 2-21 Barrio La Playa</string>
-    <string name="PBX">PBX: 5 827070 EXT. 123</string>
-    <string name="Ciudad">Cúcuta, Norte De Santander</string>
+    <string name="contactenos">Colegio Hogwarts de Magia y Hechicería :</string>
+    <string name="calle">Es un internado mágico ubicado en Escocia</string>
+    <string name="PBX"></string>
+    <string name="Ciudad">El lema de Hogwarts es: "Draco dormiens nunquam titillandus"</string>
     <string name="Menu">Menú</string>
     <string name="MU">Modificar Usuario</string>
     <string name="MH">Matricular Horario</string>

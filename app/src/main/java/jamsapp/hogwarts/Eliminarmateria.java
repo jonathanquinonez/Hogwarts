@@ -29,13 +29,27 @@ import java.util.List;
 
 import static android.widget.AdapterView.*;
 
-public class Eliminarmateria extends AppCompatActivity{
+public class Eliminarmateria extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     Button Volver,Eliminar;
-    EditText etnombrem,etprofesor,etdescripcion;
+    EditText etcodigo,etnombre,etdescripcion;
     Spinner spinner1;
     ArrayAdapter<String> semestre;
+
+    //info materia de consulta
+    String id_materia;
+    String nombre_mate;
+    String descripcion_mate;
+    String semestre_mate;
+
+
+    //inf dato
+    int n;
+    int indice;
+    ArrayAdapter<String> materiasdatoseptimo,materiasdatooctavo;
     String [] semestree={"--"};
+    String [] id_materiaspinnerseptimo ={"seleccione materia","Transformaciones","Estudios Muggles","Defensa Contra las Artes Oscuras","Pociones","Artes Oscuras","Cuidado de Criaturas Mágicas"};
+    String [] id_materiaspinneroctavo ={"seleccione materia","Herbología","Encantamientos","Astronomia","Instructora de Vuelo","Runas Antiguas","Historia de la Magia","Aritmanc"};
 
 
 
@@ -45,17 +59,26 @@ public class Eliminarmateria extends AppCompatActivity{
         setContentView(R.layout.activity_eliminarmateria);
 
         Volver = (Button)findViewById(R.id.volver);
-        etnombrem = (EditText)findViewById(R.id.user);
-        etprofesor = (EditText)findViewById(R.id.password);
-        etdescripcion=(EditText)findViewById(R.id.password);
+        etcodigo = (EditText)findViewById(R.id.codigo);
+        etnombre = (EditText)findViewById(R.id.nombre);
+        etdescripcion=(EditText)findViewById(R.id.descripcion);
         spinner1= (Spinner) findViewById(R.id.spinner);
+
+
+
+
+
+
 
 
         Bundle bundle = getIntent().getExtras();
         String dato=bundle.getString("idestudiantee");
         new Eliminarmateria.ConsultarDatos().execute("http://labcowork.com/mostraralumno.php?id_alumno="+dato);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,semestree);
-        spinner1.setAdapter(adapter);
+
+        spinner1.setOnItemSelectedListener(this);
+        materiasdatoseptimo=  new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,id_materiaspinneroctavo);
+        materiasdatooctavo=  new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,id_materiaspinnerseptimo);
+
 
 
 
@@ -65,7 +88,261 @@ public class Eliminarmateria extends AppCompatActivity{
                 finish();
             }
         });
+
+        if(dato.equals("20132329122"))
+        {
+            n=1;
+            spinner1.setAdapter(materiasdatoseptimo);
+
+        } else if(dato.equals("20132328860"))
+        {
+            n=2;
+            spinner1.setAdapter(materiasdatooctavo);
+
+        }
+
+
+
+
+
+
     }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+    {
+
+        if(n==1){
+
+            switch (adapterView.getId()) {
+                case R.id.spinner:
+                    int opcion = spinner1.getSelectedItemPosition();
+                    switch (opcion) {
+                        case 0:
+
+                            etcodigo.setEnabled(false);
+                            etnombre.setEnabled(false);
+                            etdescripcion.setEnabled(false);
+                            etcodigo.setText(null);
+                            etnombre.setText(null);
+                            etdescripcion.setText(null);
+
+                            break;
+                        case 1:  // transformaciones
+
+                            indice = 1;
+                            new ConsultarDatos().execute("http://Labcowork.com/mostrarprofesor.php?id_materia="+indice);
+
+                            etcodigo.setEnabled(true);
+                            etnombre.setEnabled(true);
+                            etdescripcion.setEnabled(true);
+                            etcodigo.setText(""+indice);
+                            etnombre.setText(id_materiaspinnerseptimo[1]);
+                            etdescripcion.setText(descripcion_mate);
+
+
+                            break;
+                        case 2:  // Estudios Muggles
+
+                            indice = 3;
+                            new ConsultarDatos().execute("http://Labcowork.com/mostrarprofesor.php?id_materia="+indice);
+
+                            etcodigo.setEnabled(true);
+                            etnombre.setEnabled(true);
+                            etdescripcion.setEnabled(true);
+                            etcodigo.setText(""+indice);
+                            etnombre.setText(id_materiaspinnerseptimo[2]);
+                            etdescripcion.setText(descripcion_mate);
+
+
+                            break;
+                        case 3:  //  Defensa contra las artes oscuras
+
+                            indice = 2;
+                            new ConsultarDatos().execute("http://Labcowork.com/mostrarprofesor.php?id_materia="+indice);
+
+                            etcodigo.setEnabled(true);
+                            etnombre.setEnabled(true);
+                            etdescripcion.setEnabled(true);
+                            etcodigo.setText(""+indice);
+                            etnombre.setText(id_materiaspinnerseptimo[3]);
+                            etdescripcion.setText(descripcion_mate);
+
+                            break;
+                        case 4:  // Pociones
+                            indice = 4;
+                            new ConsultarDatos().execute("http://Labcowork.com/mostrarprofesor.php?id_materia="+indice);
+
+                            etcodigo.setEnabled(true);
+                            etnombre.setEnabled(true);
+                            etdescripcion.setEnabled(true);
+                            etcodigo.setText(""+indice);
+                            etnombre.setText(id_materiaspinnerseptimo[4]);
+                            etdescripcion.setText(descripcion_mate);
+
+
+                            break;
+                        case 5:  // Artes oscuras
+                            indice = 5;
+                            new ConsultarDatos().execute("http://Labcowork.com/mostrarprofesor.php?id_materia="+indice);
+
+                            etcodigo.setEnabled(true);
+                            etnombre.setEnabled(true);
+                            etdescripcion.setEnabled(true);
+                            etcodigo.setText(""+indice);
+                            etnombre.setText(id_materiaspinnerseptimo[5]);
+                            etdescripcion.setText(descripcion_mate);
+
+
+                            break;
+                        case 6:  // Cuidado de criaturas magicas
+                            indice = 6;
+                            new ConsultarDatos().execute("http://Labcowork.com/mostrarprofesor.php?id_materia="+indice);
+
+                            etcodigo.setEnabled(true);
+                            etnombre.setEnabled(true);
+                            etdescripcion.setEnabled(true);
+                            etcodigo.setText(""+indice);
+                            etnombre.setText(id_materiaspinnerseptimo[6]);
+                            etdescripcion.setText(descripcion_mate);
+
+
+                            break;
+                    }
+            }
+
+        }
+
+
+        if(n==2) {
+
+
+            switch (adapterView.getId()) {
+                case R.id.spinner:
+                    int opcion = spinner1.getSelectedItemPosition();
+                    switch (opcion) {
+
+                        case 0: // seleccione materia
+
+                            etcodigo.setEnabled(false);
+                            etnombre.setEnabled(false);
+                            etdescripcion.setEnabled(false);
+                            etcodigo.setText(null);
+                            etnombre.setText(null);
+                            etdescripcion.setText(null);
+                            break;
+
+                        case 1:  //Herbologia
+
+                            indice = 7;
+                            new ConsultarDatos().execute("http://Labcowork.com/mostrarprofesor.php?id_materia="+indice);
+
+                            etcodigo.setEnabled(true);
+                            etnombre.setEnabled(true);
+                            etdescripcion.setEnabled(true);
+                            etcodigo.setText(""+indice);
+                            etnombre.setText(id_materiaspinneroctavo[1]);
+                            etdescripcion.setText(descripcion_mate);
+
+
+                            break;
+                        case 2:  //Encantamientos
+
+                            indice = 8;
+                            new ConsultarDatos().execute("http://Labcowork.com/mostrarprofesor.php?id_materia="+indice);
+
+                            etcodigo.setEnabled(true);
+                            etnombre.setEnabled(true);
+                            etdescripcion.setEnabled(true);
+                            etcodigo.setText(""+indice);
+                            etnombre.setText(id_materiaspinneroctavo[2]);
+                            etdescripcion.setText(descripcion_mate);
+
+                            break;
+                        case 3:  //Astronomia
+
+                            indice = 9;
+                            new ConsultarDatos().execute("http://Labcowork.com/mostrarprofesor.php?id_materia="+indice);
+                            etcodigo.setEnabled(true);
+                            etnombre.setEnabled(true);
+                            etdescripcion.setEnabled(true);
+                            etcodigo.setText(""+indice);
+                            etnombre.setText(id_materiaspinneroctavo[3]);
+                            etdescripcion.setText(descripcion_mate);
+
+                            break;
+                        case 4:  //Instruccion de vuelo
+
+                            indice = 10;
+                            new ConsultarDatos().execute("http://Labcowork.com/mostrarprofesor.php?id_materia="+indice);
+                            etcodigo.setEnabled(true);
+                            etnombre.setEnabled(true);
+                            etdescripcion.setEnabled(true);
+                            etcodigo.setText(""+indice);
+                            etnombre.setText(id_materiaspinneroctavo[4]);
+                            etdescripcion.setText(descripcion_mate);
+
+
+                            break;
+                        case 5:  //Runas antiguas
+
+                            indice = 11;
+                            new ConsultarDatos().execute("http://Labcowork.com/mostrarprofesor.php?id_materia="+indice);
+                            etcodigo.setEnabled(true);
+                            etnombre.setEnabled(true);
+                            etdescripcion.setEnabled(true);
+                            etcodigo.setText(""+indice);
+                            etnombre.setText(id_materiaspinneroctavo[5]);
+                            etdescripcion.setText(descripcion_mate);
+
+
+                            break;
+
+                        case 6:  //Historia de la magia
+
+                            indice = 12;
+                            new ConsultarDatos().execute("http://Labcowork.com/mostrarprofesor.php?id_materia="+indice);
+                            etcodigo.setEnabled(true);
+                            etnombre.setEnabled(true);
+                            etdescripcion.setEnabled(true);
+                            etcodigo.setText(""+indice);
+                            etnombre.setText(id_materiaspinneroctavo[6]);
+                            etdescripcion.setText(descripcion_mate);
+
+                            break;
+                        case 7:  //Aritmancia
+
+                            indice = 13;
+                            new ConsultarDatos().execute("http://Labcowork.com/mostrarprofesor.php?id_materia="+indice);
+                            etcodigo.setEnabled(true);
+                            etnombre.setEnabled(true);
+                            etdescripcion.setEnabled(true);
+                            etcodigo.setText(""+indice);
+                            etnombre.setText(id_materiaspinneroctavo[7]);
+                            etdescripcion.setText(descripcion_mate);
+
+                            break;
+
+
+                    }
+                    break;
+
+
+            }
+        }
+
+
+
+
+
+    }
+
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
+
 
 
 
@@ -92,6 +369,11 @@ public class Eliminarmateria extends AppCompatActivity{
 
             try {
                 ja = new JSONArray(result);
+
+                id_materia=(ja.getString(0));
+                nombre_mate=(ja.getString(1));
+                descripcion_mate=(ja.getString(2));
+
 
                 String Semestre =ja.getString(3);
                 Toast.makeText(getApplicationContext(), Semestre, Toast.LENGTH_LONG).show();

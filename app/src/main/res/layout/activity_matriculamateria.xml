@@ -77,11 +77,13 @@
 
                 <Spinner
                     android:id="@+id/spinnermateria"
-                    android:layout_width="match_parent"
+                    android:layout_width="291dp"
                     android:layout_height="37dp"
                     android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginTop="20dp"
-                    android:layout_weight="1" />
+                    android:background="@color/boton_logue"
+                    android:gravity="center" />
 
                 <RadioGroup
                     android:layout_width="match_parent"
@@ -89,27 +91,27 @@
 
                     <RadioButton
                         android:id="@+id/radprofesor1"
-                        android:layout_width="match_parent"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
                         android:layout_marginLeft="30dp"
-                        android:layout_weight="1"
-                        android:text="RadioButton" />
+                        android:background="@color/boton_logue" />
 
                     <RadioButton
                         android:id="@+id/radprofesor2"
-                        android:layout_width="match_parent"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
                         android:layout_marginLeft="30dp"
-                        android:layout_weight="1"
-                        android:text="RadioButton" />
+                        android:background="@color/boton_logue" />
 
                     <RadioButton
                         android:id="@+id/radprofesor3"
-                        android:layout_width="match_parent"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="30dp"
                         android:layout_weight="1"
-                        android:text="RadioButton" />
+                        android:background="@color/boton_logue" />
                 </RadioGroup>
 
                 <Button

@@ -102,48 +102,43 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/alpha_logueo"
-        android:layout_marginTop="25dp">
+        android:layout_marginTop="25dp"
+        android:weightSum="1">
 
         <TextView
-            android:text="@string/contactenos"
-            android:textSize="20dp"
-            android:textColor="@color/color_black"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/textView8"
-            android:layout_marginLeft="15dp" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:shadowColor="@android:color/background_dark"
+            android:shadowDx="3"
+            android:shadowRadius="2"
+            android:text="@string/contactenos"
+            android:textColor="@android:color/background_dark"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <TextView
-            android:text="@string/calle"
-            android:layout_width="match_parent"
-            android:textStyle="bold"
-            android:textSize="17dp"
-            android:textColor="@color/color_black"
-            android:layout_marginLeft="15dp"
-            android:layout_height="wrap_content"
             android:id="@+id/textView9"
-            android:layout_marginTop="5dp" />
-
-        <TextView
-            android:text="@string/PBX"
-            android:textStyle="bold"
             android:layout_width="match_parent"
-            android:textColor="@color/color_black"
-            android:layout_marginLeft="15dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/calle"
+            android:textColor="@android:color/background_dark"
             android:textSize="17dp"
-            android:id="@+id/textView10" />
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
             android:text="@string/Ciudad"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:textColor="@android:color/background_dark"
             android:textSize="17dp"
-            android:textStyle="bold"
-            android:layout_marginLeft="15dp"
-            android:textColor="@color/color_black"
-            android:id="@+id/textView11" />
+            android:textStyle="bold" />
 
     </LinearLayout>
 </LinearLayout>

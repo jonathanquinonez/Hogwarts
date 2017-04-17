@@ -67,28 +67,28 @@
                 <EditText
                     android:id="@+id/etsemestre"
                     android:layout_width="match_parent"
+                    android:layout_height="40dp"
                     android:layout_marginRight="110dp"
+                    android:background="@color/boton_logue"
                     android:ems="10"
+                    android:enabled="false"
                     android:hint="@string/SE"
                     android:inputType="textPersonName"
-                    android:textColorHint="@color/color_black"
-                    android:background="@color/boton_logue"
-                    android:layout_height="40dp"
-                    android:enabled="true" />
+                    android:textColorHint="@color/color_black" />
 
                 <EditText
                     android:id="@+id/etcodigo"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginRight="110dp"
-                    android:ems="10"
-                    android:hint="@string/ID"
-                    android:inputType="textPersonName"
-                    android:textColorHint="@color/color_black"
-                    android:background="@color/boton_logue"
                     android:layout_marginTop="10dp"
                     android:layout_weight="0.23"
-                    android:enabled="true" />
+                    android:background="@color/boton_logue"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:hint="@string/ID"
+                    android:inputType="textPersonName"
+                    android:textColorHint="@color/color_black" />
 
                 <EditText
                     android:id="@+id/etnombre"
