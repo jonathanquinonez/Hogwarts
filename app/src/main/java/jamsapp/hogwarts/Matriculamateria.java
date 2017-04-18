@@ -475,6 +475,9 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
                             break;
 
                         case 6:  //Historia de la magia
+                            profesor1.setEnabled(true);
+                            profesor2.setEnabled(true);
+                            profesor3.setEnabled(true);
 
                             profesor1.setText(profesoreseptimooctavo[0]);
                             profesor2.setText(profesoreseptimooctavo[1]);
@@ -512,7 +515,7 @@ public class Matriculamateria extends AppCompatActivity implements AdapterView.O
 
                             break;
                         case 7:  //Aritmancia
-
+                            profesor1.setEnabled(true);
                             profesor1.setText(profesoreseptimooctavo[4]);
                             profesor2.setText(null);
                             profesor3.setText(null);

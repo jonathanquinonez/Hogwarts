@@ -51,7 +51,7 @@ public class cambiarcontrasena extends AppCompatActivity {
 
                   }else {
                       Toast notificacion = Toast.makeText(getApplicationContext(), "Contraseñas no Coinciden", Toast.LENGTH_LONG);
-                      notificacion.show();
+notificacion.show();
                   }
               }else{
                   Toast notificacion1 = Toast.makeText(getApplicationContext(), "Campos Vacios", Toast.LENGTH_LONG);

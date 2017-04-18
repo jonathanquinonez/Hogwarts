@@ -47,8 +47,7 @@ public class Eliminarmateria extends AppCompatActivity implements AdapterView.On
     int n;
     int indice;
     ArrayAdapter<String> materiasdatoseptimo,materiasdatooctavo;
-    String [] semestree={"--"};
-    String [] id_materiaspinnerseptimo ={"seleccione materia","Transformaciones","Estudios Muggles","Defensa Contra las Artes Oscuras","Pociones","Artes Oscuras","Cuidado de Criaturas Mágicas"};
+    String [] id_materiaspinnerseptimo ={"seleccione materia","Transformaciones","Defensa Contra las Artes Oscuras","Estudios Muggles","Pociones","Artes Oscuras","Cuidado de Criaturas Mágicas"};
     String [] id_materiaspinneroctavo ={"seleccione materia","Herbología","Encantamientos","Astronomia","Instructora de Vuelo","Runas Antiguas","Historia de la Magia","Aritmanc"};
 
 
@@ -118,7 +117,6 @@ public class Eliminarmateria extends AppCompatActivity implements AdapterView.On
                     int opcion = spinner1.getSelectedItemPosition();
                     switch (opcion) {
                         case 0:
-                            indice=0;
                             etcodigo.setEnabled(false);
                             etnombre.setEnabled(false);
                             etdescripcion.setEnabled(false);
@@ -138,14 +136,13 @@ public class Eliminarmateria extends AppCompatActivity implements AdapterView.On
                             etdescripcion.setEnabled(true);
                             etcodigo.setText(""+indice);
                             etnombre.setText(id_materiaspinnerseptimo[1]);
-                            etdescripcion.setText(descripcion_mate);
+                         //   etdescripcion.setText(descripcion_mate);
 
 
                             break;
 
                         case 2:  // Estudios Muggles
 
-                            etdescripcion.setText(null);
                             indice = 3;
                             new ConsultarDatos().execute("http://Labcowork.com/mostrarmateria.php?id_materia="+indice);
 
@@ -154,13 +151,12 @@ public class Eliminarmateria extends AppCompatActivity implements AdapterView.On
                             etdescripcion.setEnabled(true);
                             etcodigo.setText(""+indice);
                             etnombre.setText(id_materiaspinnerseptimo[2]);
-                            etdescripcion.setText(descripcion_mate);
+                           // etdescripcion.setText(descripcion_mate);
 
 
                             break;
                         case 3:  //  Defensa contra las artes oscuras
 
-                            etdescripcion.setText(null);
                             indice = 2;
                             new ConsultarDatos().execute("http://Labcowork.com/mostrarmateria.php?id_materia="+indice);
 
@@ -169,12 +165,11 @@ public class Eliminarmateria extends AppCompatActivity implements AdapterView.On
                             etdescripcion.setEnabled(true);
                             etcodigo.setText(""+indice);
                             etnombre.setText(id_materiaspinnerseptimo[3]);
-                            etdescripcion.setText(descripcion_mate);
+                            //etdescripcion.setText(descripcion_mate);
 
                             break;
                         case 4:  // Pociones
 
-                            etdescripcion.setText(null);
                             indice = 4;
                             new ConsultarDatos().execute("http://Labcowork.com/mostrarmateria.php?id_materia="+indice);
 
@@ -183,13 +178,11 @@ public class Eliminarmateria extends AppCompatActivity implements AdapterView.On
                             etdescripcion.setEnabled(true);
                             etcodigo.setText(""+indice);
                             etnombre.setText(id_materiaspinnerseptimo[4]);
-                            etdescripcion.setText(descripcion_mate);
+//                            etdescripcion.setText(descripcion_mate);
 
 
                             break;
                         case 5:  // Artes oscuras
-
-                            etdescripcion.setText(null);
                             indice = 5;
                             new ConsultarDatos().execute("http://Labcowork.com/mostrarprofesor.php?id_materia="+indice);
 
@@ -198,13 +191,11 @@ public class Eliminarmateria extends AppCompatActivity implements AdapterView.On
                             etdescripcion.setEnabled(true);
                             etcodigo.setText(""+indice);
                             etnombre.setText(id_materiaspinnerseptimo[5]);
-                            etdescripcion.setText(descripcion_mate);
+                         //   etdescripcion.setText(descripcion_mate);
 
 
                             break;
                         case 6:  // Cuidado de criaturas magicas
-
-                            etdescripcion.setText(null);
                             indice = 6;
                             new ConsultarDatos().execute("http://Labcowork.com/mostrarprofesor.php?id_materia="+indice);
 
@@ -213,7 +204,7 @@ public class Eliminarmateria extends AppCompatActivity implements AdapterView.On
                             etdescripcion.setEnabled(true);
                             etcodigo.setText(""+indice);
                             etnombre.setText(id_materiaspinnerseptimo[6]);
-                            etdescripcion.setText(descripcion_mate);
+                            //etdescripcion.setText(descripcion_mate);
 
 
                             break;
@@ -250,7 +241,7 @@ public class Eliminarmateria extends AppCompatActivity implements AdapterView.On
                             etdescripcion.setEnabled(true);
                             etcodigo.setText(""+indice);
                             etnombre.setText(id_materiaspinneroctavo[1]);
-                            etdescripcion.setText(descripcion_mate);
+                           // etdescripcion.setText(descripcion_mate);
 
 
                             break;
@@ -263,7 +254,7 @@ public class Eliminarmateria extends AppCompatActivity implements AdapterView.On
                             etdescripcion.setEnabled(true);
                             etcodigo.setText(""+indice);
                             etnombre.setText(id_materiaspinneroctavo[2]);
-                            etdescripcion.setText(descripcion_mate);
+                         // etdescripcion.setText(descripcion_mate);
 
                             break;
                         case 3:  //Astronomia
@@ -275,7 +266,7 @@ public class Eliminarmateria extends AppCompatActivity implements AdapterView.On
                             etdescripcion.setEnabled(true);
                             etcodigo.setText(""+indice);
                             etnombre.setText(id_materiaspinneroctavo[3]);
-                            etdescripcion.setText(descripcion_mate);
+                          //  etdescripcion.setText(descripcion_mate);
 
                             break;
                         case 4:  //Instruccion de vuelo
@@ -287,7 +278,7 @@ public class Eliminarmateria extends AppCompatActivity implements AdapterView.On
                             etdescripcion.setEnabled(true);
                             etcodigo.setText(""+indice);
                             etnombre.setText(id_materiaspinneroctavo[4]);
-                            etdescripcion.setText(descripcion_mate);
+                        //    etdescripcion.setText(descripcion_mate);
 
 
                             break;
@@ -300,7 +291,7 @@ public class Eliminarmateria extends AppCompatActivity implements AdapterView.On
                             etdescripcion.setEnabled(true);
                             etcodigo.setText(""+indice);
                             etnombre.setText(id_materiaspinneroctavo[5]);
-                            etdescripcion.setText(descripcion_mate);
+                         //   etdescripcion.setText(descripcion_mate);
 
 
                             break;
@@ -314,7 +305,7 @@ public class Eliminarmateria extends AppCompatActivity implements AdapterView.On
                             etdescripcion.setEnabled(true);
                             etcodigo.setText(""+indice);
                             etnombre.setText(id_materiaspinneroctavo[6]);
-                            etdescripcion.setText(descripcion_mate);
+                          //  etdescripcion.setText(descripcion_mate);
 
                             break;
                         case 7:  //Aritmancia
@@ -326,7 +317,7 @@ public class Eliminarmateria extends AppCompatActivity implements AdapterView.On
                             etdescripcion.setEnabled(true);
                             etcodigo.setText(""+indice);
                             etnombre.setText(id_materiaspinneroctavo[7]);
-                            etdescripcion.setText(descripcion_mate);
+                          //  etdescripcion.setText(descripcion_mate);
 
                             break;
 
@@ -380,6 +371,7 @@ public class Eliminarmateria extends AppCompatActivity implements AdapterView.On
                 id_materia=(ja.getString(0));
                 nombre_mate=(ja.getString(1));
                 descripcion_mate=(ja.getString(2));
+                etdescripcion.setText(descripcion_mate);
 
 
             } catch (JSONException e) {
@@ -410,11 +402,6 @@ public class Eliminarmateria extends AppCompatActivity implements AdapterView.On
                 ja = new JSONArray(result);
                 JSONObject jsonArray = null;
 
-
-
-                for (int i=0;i<ja.length();i++){
-                 semestree[i+1]=(ja.getJSONObject(i).getString(String.valueOf(1)));
-                }
                 Toast.makeText(getApplicationContext(), ja.getJSONObject(2).getString(String.valueOf(1)), Toast.LENGTH_LONG).show();
 
 
